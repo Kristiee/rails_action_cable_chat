@@ -39,6 +39,7 @@ class ChatroomsController < ApplicationController
   end
 
   def show
+    binding.pry
     @chatroom = Chatroom.find_by(slug: params[:slug])
     @message = Message.new
   end
